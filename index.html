@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html>
+<title>Baby Photo Album</title>
+
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+<style>
+body{font-family: "Montserrat", sans-serif}
+h1{font-size: 50px; font-family: "Montserrat", sans-serif}
+h2{font-size: 40px;}
+p{font-size: 20px; font-style: italic}
+
+/*css for the overlay effect*/
+.container {
+    position: relative;
+    margin: auto;
+    width: 50%;
+}
+
+.image {
+  opacity: 1;
+  display: block;
+  width: 100%;
+  height: auto;
+  transition: .5s ease;
+  backface-visibility: hidden;
+}
+
+.middle {
+  transition: .5s ease;
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.container:hover .image {
+  opacity: 0.3;
+}
+
+.container:hover .middle {
+  opacity: 1;
+}
+
+.text {
+  background-color: #41bef4;
+  color: white;
+  font-size: 16px;
+  padding: 16px 32px;
+}
+/*zoom image*/
+img {
+  transition: -webkit-transform 0.25s ease;
+  transition: transform 0.25s ease;
+}
+
+img:active {
+  -webkit-transform: scale(2);
+  transform: scale(2);}
+
+</style>
+
+
+<body>
+
+<!-- plays audio -->
+   <audio controls> 
+   <source src="river.mp3" type="audio/mpeg">
+  </audio> 
+
+
+<!-- Sidebar  -->
+<nav class="w3-sidebar w3-animate-top w3-xxlarge" style="display:none;padding-top:150px" id="mySidebar">
+  <a href="javascript:void(0)" onclick="w3_close()" class="w3-button w3-xxlarge w3-display-topright" style="padding:6px 24px">
+    <i class="fa fa-remove"></i> </a> 
+
+  
+  <div class="w3-bar-block w3-center">
+    <a href="./index2.html" style="background-color:#2196f3" class="w3-bar-item w3-button w3-text-white">About</a>
+    <a href="#" style="background-color:#2196f3" class="w3-bar-item w3-button w3-text-white ">Hope</a>
+    <a href="#" style="background-color:#2196f3" class="w3-bar-item w3-button w3-text-white ">Dreams</a>
+    <a href="#" style="background-color:#2196f3" class="w3-bar-item w3-button w3-text-white">Love</a>
+  </div>
+
+</nav>
+
+<!-- !PAGE CONTENT! -->
+<div class="w3-content" style="max-width:1500px">
+
+<!-- Header -->
+<div class="w3-opacity" style="background-color:#2196f3">
+<span class="w3-button w3-xxlarge w3-white w3-right" onclick="w3_open()"><i class="fa fa-bars"></i></span> 
+<div class="w3-clear"></div>
+<header class="w3-center w3-margin-bottom">
+  <h1><b>E. CIVAN'S PHOTO COLLAGE</b></h1>
+  <h2><b>From October 17, 2014 to present</b><h2>
+  <p><b> You won't remember any of these precious memories. You won't remember, but I will... and I'll hold all the memories in my heart for the both of us</b></p>
+  <p class="w3-padding-16"><button class="w3-button w3-black" onclick="myFunction()">Padding Button</button></p>
+</header>
+</div>
+
+
+<!-- Photo Grid -->
+<div class="w3-row" id="myGrid" style="margin-bottom:128px">
+  <div class="w3-third">
+    <img src="images/baby6.JPG" style="width:100%">
+    <img src="images/baby2.jpg" style="width:100%">
+   <img src="images/baby3.jpg" style="width:100%">
+    <img src="images/baby1.jpg" style="width:100%">
+    <img src="images/baby42.JPG" style="width:100%">
+    <img src="images/baby19.jpg" style="width:100%">
+    <img src="images/babytest.jpg" style="width:150%">
+    <img src="images/baby21.jpg" style="width:100%">
+    <img src="images/baby30.jpg" style="width:100%">
+    <img src="images/baby31.jpg" style="width:100%">
+    <img src="images/baby35.jpg" style="width:100%">
+    <img src="images/baby25.jpg" style="width:100%">
+
+ </div>
+
+  
+  <div class="w3-third">
+    <img src="images/baby7.jpg" style="width:100%">
+    <img src="images/baby8.jpg" style="width:100%">
+    <img src="images/baby9.jpg" style="width:100%">
+    <img src="images/baby13.JPG" style="width:150%">
+    <img src="images/baby11.JPG" style="width:100%">
+    <img src="images/baby43.jpg" style="width:100%">
+    <img src="images/baby23.jpg" style="width:100%">
+    <img src="images/baby28.jpg" style="width:100%">
+    <img src="images/baby38.JPG" style="width:100%">
+    <img src="images/baby24.jpg" style="width:100%">
+    <img src="images/baby15.jpg" style="width:100%">
+    <img src="images/baby32.jpg" style="width:100%">
+    
+
+  </div>
+
+  <div class="w3-third">
+    <img src="images/baby4.JPG" style="width:100%">
+    <img src="images/baby36.JPG" style="width:100%">
+    <img src="images/baby12.jpg" style="width:100%">
+    <img src="images/baby10.jpg" style="width:100%">
+    <img src="images/baby14.JPG" style="width:100%">
+    <img src="images/baby17.jpg" style="width:100%">
+    <img src="images/baby18.jpg" style="width:100%">
+    <img src="images/baby37.jpg" style="width:100%">
+    <img src="images/baby22.jpg" style="width:100%">
+    <img src="images/baby26.jpg" style="width:100%">
+    <img src="images/baby27.jpg" style="width:100%">
+    <img src="images/baby29.jpg" style="width:100%">
+    <img src="images/baby34.jpg" style="width:100%">
+
+  </div>
+</div>
+
+<!-- End Page Content -->
+</div>
+
+
+
+
+<!-- image with overlay effect -->
+<div class="container">
+  <img src="images/001.jpg" class="image" style="width:100%">
+  <div class="middle">
+    <div class="text">At the women's march in nyc</div>
+  </div>
+</div>
+
+<!-- Footer -->
+<footer class="w3-container w3-padding-64 w3-light-grey w3-center w3-opacity w3-xlarge" style="margin-top:128px"> 
+
+  <i class="fa fa-linkedin w3-hover-opacity"></i>
+  <i class="fa fa-heart w-3-hover opacity"></i>
+  <i class="fa fa-heart w-3-hover opacity"></i>
+  <i class="fa fa-heart w-3-hover opacity"></i>
+  <i class="fa fa-heart w-3-hover opacity"></i>
+  <p class="w3-medium">With E. CIVAN <a</p>
+</footer>
+ 
+<script>
+
+// Toggle grid padding
+
+function myFunction() {
+
+    var x = document.getElementById("myGrid");
+    if (x.className === "w3-row") {
+        x.className = "w3-row-padding";
+
+    } else { 
+        x.className = x.className.replace("w3-row-padding", "w3-row");
+    }
+}
+
+// Open and close sidebar
+function w3_open() {
+    document.getElementById("mySidebar").style.width = "80%";
+
+    
+    
+    document.getElementById("mySidebar").style.display = "block";
+}
+
+function w3_close() {
+    document.getElementById("mySidebar").style.display = "none";
+}
+</script>
+
+
+
+</body>
+
+</html>
